@@ -1,0 +1,1 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4910a7e0-2ace-4cd9-b334-1a45c9165135/deploy-status)](https://app.netlify.com/sites/xenodochial-galileo-55795c/deploys)
