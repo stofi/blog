@@ -3,15 +3,22 @@ import React from 'react'
 export default class ThemeSwitch extends React.Component {
   constructor(props) {
     super(props)
-    const darkModePrefered = window.matchMedia("(prefers-color-scheme: dark)").matches
-    const toggled = darkModePrefered
-
     this.state = {
-      darkModePrefered,
-      toggled 
+      darkModePrefered: false,
+      toggled: false
     }
 
     this.toggleDarkMode = this.toggleDarkMode.bind(this)
+  }
+
+  componentDidMount() {
+    if (window) {
+      const darkModePrefered = window.matchMedia("(prefers-color-scheme: dark)").matches
+      this.setState( state => ({
+        darkModePrefered,
+        toggled: darkModePrefered
+      }))
+    }
   }
 
   toggleDarkMode() {
